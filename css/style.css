@@ -1,0 +1,311 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/montserrat-v18-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/montserrat-v18-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat", Sans-serif;
+    background-color: #003842;
+    color: #DDC9A3;
+    scroll-behavior: smooth;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.fullscreen {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+    line-height: 1.3em;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 3px;
+}
+img {
+    max-width: 100%;
+}
+a {
+    color: #DDC9A3;
+    text-decoration: none;
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+a:active, a:visited {
+    color: #DDC9A3;
+    text-decoration: none;
+    font-style: normal;
+}
+a:hover {
+    color: #907035;
+    text-decoration: none;
+    font-style: normal;
+}
+.header {
+    margin: 47px 0 0 0;
+}
+.logo {
+    margin-bottom: 20px;
+    max-width: 300px;
+}
+.content__text,
+.footer__text {
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+.footer__desktop {
+    margin: 0  0 47px 0;
+}
+.footer__phone {
+    margin: 25px;
+}
+.wrapper-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.icons-animation-wrapper {
+    position: relative;
+    min-width: 50px;
+    min-height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.icons-amination::before,
+.icons-amination::after{
+    content: '';
+    position: absolute;
+    border: 1px solid #DDC9A3;
+    left: 5px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    text-align: center;
+    animation: pulse 5s linear infinite;
+}
+.icons-amination::after {
+    animation-delay: 2s;
+}
+
+
+@media (min-width: 769px) {
+    .footer__mobile, .fullscreen__two {
+        visibility: hidden;
+        display: none;   
+    }
+}
+
+@media (min-width: 429px) and (max-width: 768px) {
+    h1, h2, h3, a, .content__text, .footer__text {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .header {
+        margin: 25px 0 0 0;
+    }
+    .logo {
+        min-width: 280px;
+    }
+    .footer__desktop {
+        margin: 0  0 25px 0;
+    }
+    .footer__mobile, .fullscreen__two {
+        visibility: hidden;
+        display: none;   
+    }
+}
+
+@media (min-width: 321px) and (max-width: 428px) {
+    h1, h2, h3, a, .content__text, .footer__text, .footer__mobile {
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+    .fullscreen {
+        padding: 0px 20px;
+    }
+    .fullscreen__two {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+        min-height: 100vh;
+        padding: 50px;
+    }
+    .arrow-up {
+        display: flex;
+        align-self: center;
+        margin-top: 30px;
+        max-width: 25px;
+        transform: rotate(180deg);
+        text-align: center;
+    }
+    .footer__phone {
+        margin: 50px 0px;
+    }
+    .logo {
+        max-width: 200px;
+    }
+    .footer__mobile {
+        margin: 0  0 47px 0;
+    }
+    .footer__mobile {
+        padding: 30px;
+    }
+    .footer__mobite-title {
+        padding: 15px 15px 15px 25px;
+        font-size: 0.8em;
+    }
+    .footer__desktop {
+        visibility: hidden;
+        display: none;
+    }
+    .arrow_up {
+        min-width: 45px;
+        margin-left: -13px;
+    }
+    .icons {
+        width: 45px;
+        height: 45px;
+        margin: 10px;
+    }
+    .icons::before,
+    .icons::after {
+        content: '';
+        position: absolute;
+        border: 1px solid #DDC9A3;
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        animation: pulse 1.8s linear infinite;
+    }
+    .icons::after {
+        animation-delay: 0.5s;
+    }
+}
+
+@media (max-width: 320px) {
+    h1, h2, h3, a, .content__text, .footer__text, .footer__mobile {
+        font-size: 1em;
+        line-height: 1.3em;
+    }
+    .fullscreen {
+        padding: 0px 20px;
+    }
+    .fullscreen__two {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+        min-height: 100vh;
+        padding: 50px;
+    }
+    .arrow-up {
+        display: flex;
+        align-self: center;
+        margin-top: 30px;
+        max-width: 25px;
+        transform: rotate(180deg);
+        text-align: center;
+    }
+    .footer__phone {
+        margin: 50px 0px;
+    }
+    .logo {
+        max-width: 150px;
+    }
+    .footer__mobile {
+        margin: 0  0 47px 0;
+    }
+    .footer__mobile {
+        padding: 30px;
+    }
+    .footer__mobite-title {
+        padding: 15px 15px 15px 23px;
+        font-size: 0.9em;
+    }
+    .footer__desktop {
+        visibility: hidden;
+        display: none;
+    }
+    .arrow_up {
+        min-width: 45px;
+        margin-left: -12px;
+    }
+    .icons {
+        width: 45px;
+        height: 45px;
+        margin: 10px;
+    }
+    .icons::before,
+    .icons::after {
+        content: '';
+        position: absolute;
+        border: 1px solid #DDC9A3;
+        left: -20px;
+        right: -20px;
+        top: -20px;
+        bottom: -20px;
+        border-radius: 50%;
+        animation: pulse 1.8s linear infinite;
+    }
+    .icons::after {
+        animation-delay: 0.5s;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        max-width: 40px;
+        max-height: 40px;
+        transform: scale(0.5);    
+        opacity: 0;
+    }
+    50% {
+        max-width: 40px;
+        max-height: 40px;
+        opacity: 0.15;
+    }
+    100% {
+        max-width: 40px;
+        max-height: 40px;
+        opacity: 0.4;
+        transform: scale(1.2);
+    }
+}
